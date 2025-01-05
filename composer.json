@@ -1,0 +1,39 @@
+{
+	"name":"ioguimaraes/vmwarephp",
+	"type":"library",
+	"description":"Vmware vSphere bindings for PHP",
+	"keywords":["vmware", "php", "vsphere", "bindings", "vsphere sdk", "vmware php"],
+	"homepage":"https://github.com/ioguimaraes/vmwarephp",
+	"license":"BSD-3-Clause",
+	"authors":[
+		{
+			"name":"Igor Guimarães",
+			"email":"ig.oliveragui@gmail.com",
+			"homepage":"https://ioguimaraes.com/"
+		}
+	],
+	"require":{
+		"php":">=7.4",
+		"ext-soap": "*"
+	},
+	"require-dev":{
+		"mockery/mockery":"^1.4.4"
+	},
+	"autoload": {
+		"psr-0": { "Vmwarephp": "library" },
+		"files": ["Bootstrap.php"],
+		"classmap": ["library/Vmwarephp"]
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://repo.packagist.org",
+			"options": {
+				"ssl": {
+					"verify_peer": false,
+					"allow_self_signed": true
+				}
+			}
+		}
+	]
+}
